@@ -1,5 +1,20 @@
 /* styles.css */
 
+
+/* -----------theme---------- */
+
+:root {
+    --button-colors: #00491c;
+    --text-clor: black;
+    --background-color: white;
+    --Box-border: #003e29;
+    --hover-eff: #003e296f;
+    --span-text: #515151;
+}
+
+
+/* -----------theme---------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,11 +23,11 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
 }
 
 nav {
-    background-color: #ffffff;
+    background-color: var(--background-color);
     padding: 10px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease-in-out;
@@ -28,12 +43,12 @@ nav {
 
 .logo {
     font-size: 24px;
-    color: green;
+    color: var(--button-colors);
     font-weight: bold;
 }
 
 .list {
-    width: 60%;
+    width: 52%;
 }
 
 .list ul {
@@ -47,7 +62,7 @@ nav {
 }
 
 .list a {
-    color: rgb(0, 0, 0);
+    color: var(--text-clor);
     text-decoration: none;
     font-size: 16px;
     display: block;
@@ -60,15 +75,18 @@ nav {
 
 .list a span {
     font-size: 12px;
-    color: #515151;
+    color: var(--text-clor);
 }
 
 .login {
     display: flex;
-    background-color: rgb(0, 150, 0);
+    /* background-color: rgb(0, 150, 0); */
+    background-color: var(--button-colors);
     border-radius: 5px;
     color: white;
     align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .login a {
@@ -80,9 +98,9 @@ nav {
 
 .currency-select,
 .Country {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    border: 1px solid green;
+    background-color: var(--background-color);
+    color: var(--text-clor);
+    border: 1px solid var(--Box-border);
     border-radius: 5px;
     padding: 10px 15px;
     font-size: 16px;
@@ -91,37 +109,123 @@ nav {
     transition: 0.5s;
 }
 
-.currency-select:hover {
-    background-color: rgb(218, 255, 218);
-    transition: 0.5s;
-}
 
-.Country:hover {
-    background-color: rgb(212, 255, 212);
+/* .currency-select:hover {
+    background-color: var(--hover-eff);
     transition: 0.5s;
-}
+} */
+
+
+/* .Country:hover {
+    background-color: var();
+    transition: 0.5s;
+} */
 
 option:hover {
-    border: 1px solid green;
+    border: 1px solid var(--Box-border);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: 0.5s;
+}
+
+.menu-toggle {
+    display: none;
 }
 
 
 /* Responsive Styles */
 
-@media (max-width: 768px) {
-    .nav-container {
-        width: 90%;
+.slide-nav {
+    display: none;
+}
+
+@media (max-width: 1514px) {
+    .list {
+        display: none;
     }
-    .list ul {
-        flex-direction: column;
+    .slide-nav {
+        display: flex;
+    }
+    .user {
+        display: flex;
         align-items: center;
     }
-    .list li {
-        margin: 10px 0;
+    .sliding-bar {
+        display: flex;
+        align-items: center;
     }
-    .dropdown-content {
-        position: static;
-    }
+}
+
+.hero {
+    /* background: url('hero-image.jpg') no-repeat center center; */
+    background-size: cover;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #e74c3c;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.features,
+.pricing,
+.contact {
+    padding: 2rem;
+    text-align: center;
+}
+
+.feature-cards,
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+button {
+    background-color: #3498db;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button:hover {
+    background-color: #2980b9;
 }

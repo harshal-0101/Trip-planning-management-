@@ -1,5 +1,7 @@
 import React,{ useState } from 'react'
 import './components.css'
+import AccountMenu from './AccountMenu';
+import SlideLeftNav from './SlideLeftNav';
 
 export default function Nav() {
 
@@ -21,7 +23,13 @@ export default function Nav() {
             <div className="logo">
                 MyTrip
             </div>
-            <div className="list">
+
+            <div className="slide-nav">
+             <div className="user"><AccountMenu/></div>
+             <div className="sliding-bar"><SlideLeftNav/></div>
+            </div>
+
+            <div className='list'>
                 <ul>
                     <li>
                         <a href="">
