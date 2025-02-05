@@ -28,7 +28,7 @@ const PlaceSlider = () => {
       <button className="slider-button left" onClick={handleLeftClick}>
         &lt;
       </button>
-      <div className="slider">
+      <div className="Place-slider-div">
         {trips.map((trip, index) => {
           let positionClass = '';
           let scale = 1; // Default size

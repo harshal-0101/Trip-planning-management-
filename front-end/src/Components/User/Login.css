@@ -1,0 +1,23 @@
+.SignIn-SignUp-container {
+    background-image: url("D:\final year project\front-end\src\Images\BGImage\trip-Login-BG.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.show-PWD {
+    width: 100%;
+    display: flex;
+    font-size: 12px;
+}
+
+.show-PWD input {
+    width: 30px;
+}

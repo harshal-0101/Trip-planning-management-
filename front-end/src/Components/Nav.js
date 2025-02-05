@@ -2,6 +2,7 @@ import React,{ useState } from 'react'
 import './components.css'
 import AccountMenu from './AccountMenu';
 import SlideLeftNav from './SlideLeftNav';
+import { Link } from 'react-router-dom';
 
 export default function Nav() {
 
@@ -21,7 +22,7 @@ export default function Nav() {
       <nav>
         <div className='nav-container'>
             <div className="logo">
-                MyTrip
+               <Link to="/Home">My Trip</Link>
             </div>
 
             <div className="slide-nav">
@@ -44,7 +45,7 @@ export default function Nav() {
                         </a>
                     </li>
                     <li className='login'>
-                        <a href="">Create Account/Login</a>
+                        <Link to="/user/login">Create Account/Login</Link>
                     </li>
                     <li>
                       <select name="Country" id="" className='Country'>

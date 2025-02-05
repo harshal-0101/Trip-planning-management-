@@ -61,11 +61,11 @@ export default function BookingSystem() {
       <div className="booking-overlay">
         <div className="container">
           <div className="navigation">
-            <button className="nav-button" onClick={handlePrevious}>
+            <button className="nav-button-booking" onClick={handlePrevious}>
               <ChevronLeft className="h-6 w-6" />
             </button>
             <div className="nav-icon">{getIcon()}</div>
-            <button className="nav-button" onClick={handleNext}>
+            <button className="nav-button-booking" onClick={handleNext}>
               <ChevronRight className="h-6 w-6" />
             </button>
           </div>

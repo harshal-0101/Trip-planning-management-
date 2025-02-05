@@ -4,7 +4,7 @@
 /* -----------theme---------- */
 
  :root {
-    --button-colors: #16a34a;
+    --button-colors: #ff4b2b;
     --button2-colors: rgb(255, 242, 0);
     --button2-hover-colors: rgba(255, 242, 0, 0.74);
     --text-clor: black;
@@ -43,12 +43,14 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 2;
 }
 
-.logo {
+.logo a {
     font-size: 24px;
     color: var(--button-colors);
     font-weight: bold;
+    text-decoration: none;
 }
 
 .list {
@@ -207,7 +209,7 @@ option:hover {
     margin-bottom: 55px;
 }
 
-.slider {
+.Place-slider-div {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -337,7 +339,7 @@ option:hover {
     margin-bottom: 30px;
 }
 
-.nav-button {
+.nav-button-booking {
     background-color: white;
     border: none;
     border-radius: 50px;
@@ -638,6 +640,158 @@ select.form-input:focus {
 
 .package-card:hover .overlay {
     background: rgba(0, 0, 0, 0.6);
+}
+
+
+/* -------------hotelcart--------------------- */
+
+.hotel-card {
+    background-color: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.hotel-card-image {
+    height: 192px;
+    width: 100%;
+}
+
+.hotel-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hotel-card-content {
+    padding: 24px;
+}
+
+.hotel-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.hotel-card-header h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.hotel-card-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.star-icon {
+    width: 20px;
+    height: 20px;
+    fill: #fbbf24;
+}
+
+.hotel-card-description {
+    color: #4b5563;
+    margin-bottom: 16px;
+}
+
+.hotel-card-price {
+    font-weight: 600;
+}
+
+
+/* -----------hotelcartslider--------------   */
+
+.hotel-slide-container-section {
+    margin-top: 40px;
+}
+
+.hotel-slider {
+    max-width: 1450px;
+    width: 100%;
+    background-color: #e5efe5;
+    padding: 48px 16px;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.hotel-slider-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hotel-slider h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 32px;
+}
+
+.slider-wrapper {
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-item {
+    scroll-snap-align: start;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:hover {
+    background-color: #f3f4f6;
+}
+
+.nav-button.left {
+    left: -24px;
+}
+
+.nav-button.right {
+    right: -24px;
+}
+
+.nav-button svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+@media (max-width: 768px) {
+    .nav-button {
+        display: none;
+    }
 }
 
 

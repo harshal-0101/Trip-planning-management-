@@ -1,13 +1,14 @@
 import React from 'react'
-import Nav from './Nav'
+
 import PlaceSlider from './PlaceSlider'
 import BookingSystem from './BookingSystem'
 import GoldPackageSection from './GoldPackageSection'
+import HotelCartSlider  from './HotelCartSlider'
 
 export default function Home() {
   return (
     <div>
-      <Nav/>
+      
       <main>
       <div className="main-container">
         <div className="intro">
@@ -26,6 +27,9 @@ export default function Home() {
       <div className="Offer-Div">
         <GoldPackageSection/>
       </div>
+       <div className='Hotel-Cart-Slider'>
+       <HotelCartSlider/>
+       </div>
       </main>
     </div>
   )
